@@ -11,29 +11,22 @@ import org.springframework.stereotype.Service;
 import orlov.home.centurapp.entity.app.SupplierApp;
 import orlov.home.centurapp.entity.opencart.ImageOpencart;
 import orlov.home.centurapp.entity.opencart.ProductOpencart;
-import orlov.home.centurapp.entity.opencart.SupplierOpencart;
 import orlov.home.centurapp.service.api.translate.TranslateService;
 import orlov.home.centurapp.service.appservice.FileService;
-import orlov.home.centurapp.service.appservice.ScraperDataUpdateService;
 import orlov.home.centurapp.service.appservice.UpdateDataService;
 import orlov.home.centurapp.service.daoservice.app.AppDaoService;
-import orlov.home.centurapp.service.daoservice.app.SupplierAppService;
 import orlov.home.centurapp.service.daoservice.opencart.OpencartDaoService;
 import orlov.home.centurapp.service.parser.*;
 import orlov.home.centurapp.util.AppConstant;
 
-import java.io.File;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
-import java.util.*;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
-import java.util.regex.Pattern;
-
-import static java.nio.file.StandardCopyOption.*;
 
 @Service
 @Slf4j
@@ -61,6 +54,8 @@ public class ManagerService {
     private final ParserServiceOscar parserServiceOscar;
     private final ParserServiceAnshar parserServiceAnshar;
     private final ParserServiceFrizel parserServiceFrizel;
+    private final ParserServiceZapovit parserServiceZapovit;
+    private final ParserServiceViorinaDeko parserServiceViorinaDeko;
     private final OpencartDaoService opencartDaoService;
     private final AppDaoService appDaoService;
     private final UpdateDataService updateDataService;
@@ -170,25 +165,27 @@ public class ManagerService {
             while (true) {
                 try {
                     log.info("Start global process");
-                    parserServiceFrizel.doProcess();
-                    parserServiceAnshar.doProcess();
-                    parserServiceOscar.doProcess();
-                    parserServiceCanadapech.doProcess();
-                    parserServiceRP.doProcess();
-                    parserServiceHator.doProcess();
-                    parserServiceKirovogradvesy.doProcess();
-                    parserServiceUhlmash.doProcess();
-                    parserServiceTechsnab.doProcess();
-                    parserServiceNoveen.doProcess();
-                    parserServiceGoodfood.doProcess();
-                    parserServiceArtinhead.doProcess();
-                    parserServiceAstim.doProcess();
-                    parserServiceMaresto.doProcess();
-                    parserServiceKodaki.doProcess();
-                    parserServiceNowystyl.doProcess();
-                    parserServiceIndigowood.doProcess();
-                    parserServiceSector.doProcess();
-                    parserServiceTfb2b.doProcess();
+//                    parserServiceFrizel.doProcess();
+//                    parserServiceAnshar.doProcess();
+//                    parserServiceOscar.doProcess();
+//                    parserServiceCanadapech.doProcess();
+//                    parserServiceRP.doProcess();
+//                    parserServiceHator.doProcess();
+//                    parserServiceKirovogradvesy.doProcess();
+//                    parserServiceUhlmash.doProcess();
+//                    parserServiceTechsnab.doProcess();
+//                    parserServiceNoveen.doProcess();
+//                    parserServiceGoodfood.doProcess();
+//                    parserServiceArtinhead.doProcess();
+//                    parserServiceAstim.doProcess();
+//                    parserServiceMaresto.doProcess();
+//                    parserServiceKodaki.doProcess();
+//                    parserServiceNowystyl.doProcess();
+//                    parserServiceIndigowood.doProcess();
+//                    parserServiceSector.doProcess();
+//                    parserServiceTfb2b.doProcess();
+//                    parserServiceZapovit.doProcess();
+                    parserServiceViorinaDeko.doProcess();
                     log.info("End global process");
                     TimeUnit.HOURS.sleep(10);
                 } catch (Exception e) {

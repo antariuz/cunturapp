@@ -40,8 +40,7 @@ import java.util.zip.ZipOutputStream;
 @Slf4j
 public class FileService {
 
-
-    public static final String imageDirOC = "C:/xampp/htdocs/ocapp/image/";
+    public static final String imageDirOC = "C:/Users/Batman/Documents/apps/centur/";
 //            public static final String imageDirOC = "/home/centurwebstarsco/public_html/image/";
     public static final String PART_PATH = "catalog/app/";
 
