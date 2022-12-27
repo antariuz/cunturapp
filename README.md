@@ -12,7 +12,7 @@
 
 Реализация парсера по сайту http://viorina-deko.com/ua/ находится в классе ParserServiceViorinaDeko.
 
-Для запуска парсера http://localhost:8080/admin/block и жмякаем запустить парсер. Либо сразу по ссылке http://localhost:8080/admin/block/parsing
+Для запуска парсера заходим сюда http://localhost:8080/admin/block и жмякаем запустить парсер. Либо сразу по ссылке http://localhost:8080/admin/block/parsing
 
 В ManagerService закоментированы стороние парсеры.
 
