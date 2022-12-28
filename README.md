@@ -19,3 +19,5 @@
 Данные авторизации
 * Логин: centur
 * Пароль: centur_409759814
+
+![image](https://user-images.githubusercontent.com/14263979/209796184-0cf18512-92ed-4a45-941c-c6d3d4e6d61a.png)
